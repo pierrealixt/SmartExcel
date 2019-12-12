@@ -75,7 +75,7 @@ class SmartExcel():
         """
         Init in READMODE.
         """
-        self.build_columns_from_definition(definition)
+        self.parse_definition(definition)
 
         self.workbook = load_workbook(path)
 
@@ -104,8 +104,6 @@ class SmartExcel():
         self.meta_ws.protect()
 
         self.parse_definition(definition)
-        # self.build_columns_from_definition(definition)
-
 
     def parse(self):
         """
